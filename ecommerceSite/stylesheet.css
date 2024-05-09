@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    background: #023047;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
+
+
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #fb8500;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    background: #8ECAE6;
+    color: #023047;
+    font-weight: bolder;
+    transform: scale(1.05);
+
+}
+
+.nav ul li a.highlighted_button {
+    background: #fb8500;
+    color: #023047;
+}
+
+.nav ul li a.highlighted_button:hover{
+    background: #8ECAE6;
+    color: #023047;
+    font-weight: bolder;
+    transform: scale(1.05);
+
+}
+
+/*Turn button light blue to demonstrate which page you're on*/
+nav ul li a.current_page{
+    background: #8ECAE6;
+    color: #023047;
+    font-weight: bolder;
+}
+
+
+
+.category_header {
+    background-color:#8ECAE6;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px; /* to match the height of the nav-bar*/
+    color: #001b38;
+    position: top;
+}
+
+.home-images {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+.image-and-category:hover {
+    transform: scale(1.05);
+}
+
+.image-and-category{
+    padding: 20px;
+    border: solid 2px #8ECAE6;
+    border-radius: 10px;
+    margin: 20px;
+}
+.home-images p{
+    font-size: 48px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #023047;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    color:#8ECAE6;
+    font-weight: bolder;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    color: #8ECAE6;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #fb8500;
+    transform: scale(1.05);
+
+}
+
+
+.picture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+
+.picture {
+    width: 100%;
+    height: auto;
+}
+
+.home_images img {
+    flex: 1 1 auto;
+    width: 33.33%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.product {
+    width: calc(50% - 20px);
+    margin: 0 auto 20px; /* Centre horizontally and add bottom margin */
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid 2px #8ECAE6;
+    padding: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+}
+
+
+
+.product:hover{
+    transform: scale(1.05);
+
+}
+
+.product h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3, p{
+    color: #001b38;
+}
+
+.product button {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #fb8500;
+    color: #023047;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.product button:hover {
+    background: #8ECAE6;
+    color: #023047;
+    font-weight: bolder;
+    transform: scale(1.05);
+
+}
+
+
+.basket-item {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.basket-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    margin-bottom: 5px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+/* For the +/- buttons in the basket */
+.quantity button {
+    background-color: #fb8500;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px; 
+}
+
+/* Change font colour/background colour when hovering over +/- buttons */
+.quantity button:hover {
+    color:#023047;
+    background-color: #8ECAE6;
+    transform: scale(1.05);
+
+}
+
+/* Add margin between the buttons */
+.quantity button + button {
+    margin-left: 5px;
+}
+
+/* Style the quantity input box */
+.quantity input {
+    width: 40px;
+    text-align: center;
+    padding: 4px; /* Add padding */
+    margin: 1px;
+}
+
+.quantity input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #fb8500; /* Change border color when focused */
+}
+
+.remove-btn {
+    margin-left: auto;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color:#023047;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.remove-btn:hover {
+    background-color: red;
+    transform: scale(1.05);
+
+}
+
+.total-container {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+/*FAQ Button*/
+.faq-btn {
+    background-color: #fb8500; /* Orangey shade */
+    color: #023047;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px; /* Adjust margin as needed */
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.faq-btn:hover {
+    background-color: #8ECAE6; /* Darker shade on hover */
+}
+
+/* Main FAQ Body Styles */
+.main-faq-body {
+    margin-top: 20px; /* Add space beneath fixed navigation */
+    padding: 20px; /* Add padding for equal gap */
+}
+
+  
+
+.faq-heading {
+    color: #023047;
+}
+   
+
+
+.faq {
+    margin-top: 20px;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .checkout-btn, .checkout-btn-final {
+    background-color: #fb8500;
+    color: #fff;
+    border: 5px solid #8ECAE6;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-radius: 25px 0 25px 0;
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+
+
+  .checkout-btn a:visited {
+    color: inherit; /*Avoid turning text purple when button clicked*/
+}
+
+
+
+.basket-icon {
+    position: relative;
+    
+}
+.basket-icon-mobile{
+    display: none;
+    padding-right: 20px;
+    top: -5px;
+    
+}
+/* Styles for the checkout form container */
+.checkout-form-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+/* Styles for the back button */
+.back-btn {
+    background-color: #023047;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #001b38;
+    transform: scale(1.05);
+
+}
+
+/* Styles for the checkout button */
+.checkout-btn, .checkout-btn-final {
+    background-color: #fb8500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+
+}
+
+.checkout-btn:hover, .checkout-btn-final:hover  {
+    background-color:#8ECAE6;
+    color:#023047
+}
+
+/* Styles for the checkout form */
+.checkout-form {
+    max-width: 600px; /* Set maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding around the form */
+}
+
+/* Styles for form labels */
+.checkout-form label {
+    font-weight: bold;
+    color: #001b38;
+}
+
+/* Styles for form inputs */
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
+    width: 100%; /* Make input fields full width */
+    padding: 10px; /* Add padding to input fields */
+    margin-bottom: 15px; /* Add spacing between input fields */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px; /* Add border radius to input fields */
+}
+
+
+.basket-count {
+    position: absolute;
+    top: -20px; /* Adjust position as needed */
+    right: -20px; /* Adjust position as needed */
+    background-color: red; /* Background color for the count */
+    color: #fff; /* Text color for the count */
+    border-radius: 50%; /* Make it a circle */
+    padding: 7px; /* Adjust padding */
+    font-size: 12px; /* Adjust font size */
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+.basket-container{
+    margin-top: 5px;
+}
+
+/* CSS for input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="search"],
+input[type="url"],
+input[type="month"],
+input[type="week"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    /* Add your font family here */
+    font-family: 'Roboto', sans-serif;
+    /* Add your font size here */
+    font-size: 16px; /* Example font size */
+    /* Add other font properties as needed */
+    /* For example:
+       font-weight: bold;
+       font-style: italic;
+       color: #333;
+    */
+}
+
+.error-message{
+    color:red;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Change to match your website background color */
+    color: #001b38;
+    padding: 30px; /* Increase padding for a bigger popup */
+    border-radius: 20px; /* Increase border-radius for rounded corners */
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase shadow size and opacity */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Use bold font weight for emphasis */
+    color: #001b38; /* Match text color with theme */
+}
+
+.popup i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.popup i.fa-exclamation-triangle {
+    color: #fb8500; /* Change icon to match colour theme */
+}
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+    label {
+        color: #fb8500;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .menu-btn {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .basket-icon-mobile {
+        display: block;
+        margin-right: 10px;
+        top: 2px;
+        color: #fb8500;
+        position: relative; /* Ensure the basket icon is positioned relative */
+    }
+
+
+
+    .basket-count-mobile {
+        position: absolute;
+        top: -2px;
+        right: 30px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        padding: 5px 5px 5px 5px;
+        font-weight: bold;
+
+    }
+
+    .basket-icon-mobile a{
+        color:#fb8500;
+        font-size: 24px;
+        
+    }
+
+    .menu-btn__burger {
+        margin-top: 7px;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: #fb8500;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #023047;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+
+    .nav-links.active li {
+        text-align: center;
+        margin: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        display: flex;
+        margin-top: 20px;
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .image-container img {
+        width: 100%; /* Make images fill the container */
+        max-width: 600px; /* Set maximum width for the images */
+        height: auto;
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .nav {
+        justify-content: space-between; /* Ensures logo is aligned to the left and buttons are aligned to the right */
+    } 
+
+    .nav ul {
+        margin-left: auto; /* Pushes the navigation buttons to the right */
+    }
+
+    .product {
+        width: calc(25% - 20px);
+    }
+
+    .logo {
+        color: #fb8500;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .image-container {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    .main-faq-body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .faq-container {
+        background-color: #8ECAE6;
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 20px; /* Add margin for equal gap */
+        border: solid 1px #023047;
+        width: calc(33.33% - 40px); /* Adjust width to fit 3 containers per row with space between them */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribute content evenly vertically */
+    }
+    
+    .faq-heading {
+        color: #023047;
+        margin-bottom: 20px; /* Add margin below heading */
+    }
+    
+    .faq {
+        color: #001b38;
+        flex-grow: 1; /* Allow paragraph to grow to fill remaining space */
+    }
+    
+    .image-container img {
+        width: 100%; /* Make images fill the container */
+        max-width: 600px; /* Set maximum width for the images */
+        height: auto;
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        padding: 20px;
+        
+    
+    }
+
+}
+
+/* Phone screen size */
+@media (max-width: 767px) {
+    .logo {
+        color: #fb8500;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /* FAQ Container Styles */
+    .faq-container {
+        background-color: #8ECAE6;
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 20px; /* Add margin for equal gap */
+        border: solid 1px #023047;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main-faq-body {
+        justify-content: space-between; /* Ensure equal space between columns */
+    }
+
+    .faq-container {
+        width: calc(50% - 40px); /* Set width to fit 2 containers per row with space between them */
+    }
+}

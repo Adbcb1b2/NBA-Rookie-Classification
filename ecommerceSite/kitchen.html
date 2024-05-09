@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eCommerce Site</title> 
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+
+   <body>
+
+    <!--Navigation-->
+    <nav class="nav">
+        <!--Logo-->
+        <a href="ecommerce.html" class="logo">Ecommerce</a>
+
+        <!--Navigation for Larger Screens-->
+        <ul class="nav-links">
+            <li><a href="ecommerce.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="clothing.html"><i class="fas fa-tshirt"></i> Clothing</a></li>
+            <li><a href="electronics.html"><i class="fas fa-laptop"></i> Electronics</a></li>
+            <li><a href="bathroom.html"><i class="fas fa-bath"></i> Bathroom</a></li>
+            <li><a href="kitchen.html" class="current_page"><i class="fas fa-utensils"></i> Kitchen</a></li>
+            <li>
+                <a href="basket.html" class="highlighted_button">
+                    <i class="fas fa-shopping-basket"></i> Basket 
+                    <span class="basket-icon">
+                        <span class="basket-count">0</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <!--Navigation for Smaller Screens-->
+        <div class="menu-btn">
+            <div class="basket-icon-mobile">
+                <a href="basket.html" class="highlighted_button">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="basket-count-mobile">0</span>
+                </a>
+            </div>
+            <div class="menu-btn__burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main Section-->
+    <div class="main">
+
+        <!--Page Title-->
+        <h1 class="category_header">Kitchen</h1>
+
+        <!-- Main Section - Items for Sale-->
+        <div class="products">
+            
+            <!-- Div for product image, title, details, price, 'Add to Basket' button-->
+            <div class="product">
+                <!--Details-->
+                <img src="kitchen1.jpg" alt="Wooden Utensil Set" title="Wooden Utensil Set - 1x Spoon, 1x Fork, 1x Spatula">
+                <h3 title="Wooden Utensil Set - 1x Spoon, 1x Fork, 1x Spatula">Wooden Utensil Set</h3>
+                <p>1x Spoon, 1x Fork, 1x Spatula</p>
+                <p>£5</p>
+                <button class="add-to-basket" data-name="Utensil Set" data-price="5">Add to Basket</button>
+            </div>
+
+            <div class="product">
+                <img src="kitchen2.jpg" alt="Saucepan Set" title="Saucepan Set - Small, Medium and Large. Colour: Granite">
+                <h3 title="Saucepan Set - Small, Medium and Large. Colour: Granite">Saucepan Set</h3>
+                <p>Small, Medium and Large</p>
+                <p>Colour: Granite</p>
+                <p>£50</p>
+                <button class="add-to-basket" data-name="Saucepan Set" data-price="50">Add to Basket</button>
+            </div>
+
+            <div class="product">
+                <img src="kitchen3.jpg" alt="Chopping Boards" title="Chopping Boards - 6 pack. Colours: Red, Blue, Yellow, Green, White, Brown">
+                <h3 title="Chopping Boards - 6 pack. Colours: Red, Blue, Yellow, Green, White, Brown">Chopping Boards</h3>
+                <p>6 pack</p>
+                <p>Colours: Red, Blue, Yellow, Green, White, Brown</p>
+                <p>£10</p>
+                <button class="add-to-basket" data-name="Chopping Boards" data-price="10">Add to Basket</button>
+            </div>
+
+            <div class="product">
+                <img src="kitchen4.jpg" alt="Air Fryer" title="Air Fryer - 3L Capacity. Colour: Black">
+                <h3 title="Air Fryer - 3L Capacity. Colour: Black">Airfryer</h3>
+                <p>3L Capacity</p>
+                <p>Colour: Black</p>
+                <p>£150</p>
+                <button class="add-to-basket" data-name="Air Fryer" data-price="150">Add to Basket</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <!--Footer-->
+    <footer class="footer">
+        <!--Copyright Section-->
+        <div class="footer_first">
+            <p>&copy; 2024 Kim Richards</p>
+        </div>
+        <!--Contact Details Section-->
+        <div class="footer_second">
+            <p>123 Example Road, Cityville, Country</p>
+            <p>Phone: +447123456789</p>
+        </div>
+        <!--Social Media Link Section-->
+        <div class="footer_third">
+            <!-- Social Media Icons -->
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- Pop up for when 'Add to Basket' buttons are clicked-->
+    <div id="addedToBasketPopup" class="popup">
+        <!--Popup Content-->
+        <div class="popup-content">
+            <!--Text with Icon-->
+            <p><i class="fas fa-exclamation-triangle"></i> Added to basket!</p>
+        </div>
+    </div>
+
+   </body>
+   <script src="script.js"></script>
+   
+</html>

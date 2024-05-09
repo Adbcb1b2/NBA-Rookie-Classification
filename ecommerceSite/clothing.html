@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eCommerce Site</title> 
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!--Tab logo -->
+        <link rel="icon" href="tab_logo.png" type="image/png">
+    </head>
+
+   <body>
+
+    <!--Navigation-->
+    <nav class="nav">
+        <!--Logo-->
+        <a href="ecommerce.html" class="logo">Ecommerce</a>
+
+        <!-- Navigation for larger screens-->
+        <ul class="nav-links">
+            <li><a href="ecommerce.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="clothing.html" class="current_page"><i class="fas fa-tshirt"></i> Clothing</a></li>
+            <li><a href="electronics.html"><i class="fas fa-laptop"></i> Electronics</a></li>
+            <li><a href="bathroom.html"><i class="fas fa-bath"></i> Bathroom</a></li>
+            <li>
+                <a href="basket.html" class="highlighted_button">
+                    <i class="fas fa-shopping-basket"></i> Basket 
+                    <span class="basket-icon">
+                        <span class="basket-count">0</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Navigation for larger screens-->
+        <div class="menu-btn">
+            <div class="basket-icon-mobile">
+                <a href="basket.html" class="highlighted_button">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="basket-count-mobile">0</span>
+                </a>
+            </div>
+            <div class="menu-btn__burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content - Items for sale -->
+    <div class="main">
+
+        <!-- Page title-->
+        <h1 class="category_header">Clothing</h1>
+
+        <!--Div for products-->
+        <div class="products">
+
+            <!-- Div for product image, title, details, price, 'Add to Basket' button-->
+            <div class="product">
+                <!--Details-->
+                <img src="clothing1.jpeg" alt="Men's Set" title="Men's Set - 1x T-shirt 1x Shorts. Colour: Black/Gold">
+                <h3 title="Men's Set - 1x T-shirt 1x Shorts. Colour: Black/Gold">Men's Set</h3>
+                <p>1x T-shirt 1x Shorts</p>
+                <p>Colour: Black/Gold</p>
+                <p>£17.50</p>
+                <button class="add-to-basket" data-name="Men's Set" data-price="17.50">Add to Basket</button>
+            </div>
+
+            <div class="product">
+                <img src="clothing2.jpg" alt="Woman's T-shirt" title="Woman's T-shirt - Logo T-shirt. Colour: White/Black">
+                <h3 alt="Woman's T-shirt" title="Woman's T-shirt - Logo T-shirt. Colour: White/Black">Woman's T-shirt</h3>
+                <p>Logo T-shirt</p>
+                <p>Colour: White/Black</p>
+                <p>£12</p>
+                <button class="add-to-basket" data-name="Woman's Tshirt" data-price="12">Add to Basket</button>
+            </div>
+
+            <div class="product">
+                <img src="clothing3.jpg" alt="Socks" title="Socks - 8 pack. Colour: Assorted">
+                <h3 title="Socks - 8 pack. Colour: Assorted">Socks</h3>
+                <p>9 pack</p>
+                <p>Colour: Assorted</p>
+                <p>£5</p>
+                <button class="add-to-basket" data-name="Socks" data-price="5">Add to Basket</button>
+            </div>
+
+            
+
+        </div>
+
+        
+
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+        <!--Copyright Section-->
+        <div class="footer_first">
+            <p>&copy; 2024 Kim Richards</p>
+        </div>
+        <!--Contact Details Section-->
+        <div class="footer_second">
+            <p>123 Example Road, Cityville, Country</p>
+            <p>Phone: +447123456789</p>
+            <!-- FAQ Button -->
+            <br>
+            <a href="faqs.html" class="faq-btn">FAQs</a>
+        </div>
+        <br>
+
+        <!--Social Media Link Section-->
+        <div class="footer_third">
+            
+            <!-- Social Media Icons -->
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- Pop up for when 'Add to Basket' buttons are clicked-->
+    <div id="addedToBasketPopup" class="popup">
+        <!--Popup Content-->
+        <div class="popup-content">
+            <!--Text with Icon-->
+            <p><i class="fas fa-exclamation-triangle"></i> Added to basket!</p>
+        </div>
+    </div>
+
+   </body>
+
+   <script src="script.js"></script>
+   
+</html>
